@@ -51,7 +51,7 @@ const monthSchema = new Schema(
 const KPISchema = new Schema(
   {
     titalProfit: {
-      type: mongoose.types.Currency,
+      type: mongoose.Types.Currency,
       currency: "USD",
       get: (v) => v / 100, // mongoose currency is x100 so we need to do this
     },
