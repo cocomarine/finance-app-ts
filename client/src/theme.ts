@@ -1,5 +1,5 @@
 // with tailwind shade extension, highlight colour code and press cmd-k cmd-g 
-// to generate shades
+// to generate shades either sides (original colour will be 500)
 
 export const tokens = {
   grey: {
@@ -13,18 +13,32 @@ export const tokens = {
     800: "#48494e",
     900: "#242427",
   },
+  
   primary: {
-    // light green
-    100: "#d0fcf4",
-    200: "#a0f9e9",
-    300: "#71f5de",
-    400: "#41f2d3",
-    500: "#12efc8",
-    600: "#0ebfa0",
-    700: "#0b8f78",
-    800: "#076050",
-    900: "#043028",
-  },
+    // teal
+    100: "#d0f6fc",
+    200: "#a0edf9",
+    300: "#71e4f5",
+    400: "#41dbf2",
+    500: "#12d2ef",
+    600: "#0ea8bf",
+    700: "#0b7e8f",
+    800: "#075460",
+    900: "#042a30"
+},
+
+  // primary: {
+  //   // light green
+  //   100: "#d0fcf4",
+  //   200: "#a0f9e9",
+  //   300: "#71f5de",
+  //   400: "#41f2d3",
+  //   500: "#12efc8",
+  //   600: "#0ebfa0",
+  //   700: "#0b8f78",
+  //   800: "#076050",
+  //   900: "#043028",
+  // },
   secondary: {
     // yellow
     100: "#fcf0dd",
