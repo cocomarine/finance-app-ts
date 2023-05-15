@@ -4,7 +4,7 @@ import FlexBetween from "@/components/FlexBetween";
 import { useGetKpisQuery, useGetProductsQuery } from "@/state/api";
 import { Box, Typography, useTheme } from "@mui/material";
 import { useMemo } from "react";
-import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, Cell, Pie, PieChart, Scatter, ScatterChart, ZAxis } from "recharts";
+import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Line, Cell, Pie, PieChart, Scatter, ScatterChart, ZAxis } from "recharts";
 
 const pieData = [
   { name: "Group A", value: 600 },
