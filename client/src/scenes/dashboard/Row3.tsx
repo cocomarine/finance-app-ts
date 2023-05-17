@@ -50,7 +50,13 @@ const Row3 = () => {
               border: "none"
             },
             "& .MuiDataGrid-cell": {
-              borderBottom: `1px solid ${palette.grey[800]}`
+              borderBottom: `1px solid ${palette.grey[800]} !important`
+            },
+            "& .MuiDataGrid-columnHeaders": {
+              borderBottom: `1px solid ${palette.grey[800]} !important`
+            },
+            "& .MuiDataGrid-columnSeparator": {
+              visibility: "hidden",
             },
           }}
         >
