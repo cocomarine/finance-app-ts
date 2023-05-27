@@ -23,8 +23,8 @@ const Row2 = () => {
       operationalData[0].monthlyData.map(({ month, operationalExpenses, nonOperationalExpenses }) => {
         return {
           name: month.substring(0, 3), 
-          "Operational Expenses": operationalExpenses,
-          "Non Operational Expenses": nonOperationalExpenses,
+          "Operational": operationalExpenses,
+          "Non Operational": nonOperationalExpenses,
         };
       })
     );
@@ -47,7 +47,7 @@ const Row2 = () => {
     <>
       <DashboardBox gridArea="d">
         <BoxHeader
-          title="Operational vs Non-Operational Expenses"
+          title="Expenses: Operational vs. Non-operational"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -98,20 +98,20 @@ const Row2 = () => {
             <Line
               yAxisId="left"
               type="monotone"
-              dataKey="Non Operational Expenses"
+              dataKey="Non Operational"
               stroke={palette.tertiary[500]}
             />
             <Line
               yAxisId="right"
               type="monotone"
-              dataKey="Operational Expenses"
+              dataKey="Operational"
               stroke={palette.primary.main}
             />
           </LineChart>
         </ResponsiveContainer>
       </DashboardBox>
       <DashboardBox gridArea="e">
-        <BoxHeader title="Campaigns and Targets" sideText="+4%"/>
+        <BoxHeader title="Targets" sideText="+4%"/>
         <FlexBetween mt="0.25rem" gap="1.5rem" pr="1rem">
           <PieChart 
             width={110} 
@@ -131,7 +131,7 @@ const Row2 = () => {
               paddingAngle={2}
               dataKey="value"
             >
-              {pieData.map((entry, index) => (
+              {pieData.map((_entry, index) => (
                 <Cell 
                   key={`cell-${index}`} 
                   fill={pieColors[index]} 
@@ -160,7 +160,6 @@ const Row2 = () => {
           </Box>
         </FlexBetween>
       </DashboardBox>
-
       <DashboardBox gridArea="f">
         <BoxHeader title="Product Prices vs Expenses" sideText="+4%" />
         <ResponsiveContainer width="100%" height="100%">

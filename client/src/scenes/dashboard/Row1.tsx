@@ -26,7 +26,7 @@ const Row1 = () => {
       data && 
       data[0].monthlyData.map(({ month, revenue, expenses }) => {
         return {
-          name: month.substring(0, 3), // shortened month name
+          name: month.substring(0, 3), 
           revenue: revenue,
           expenses: expenses
         }
@@ -39,7 +39,7 @@ const Row1 = () => {
       data && 
       data[0].monthlyData.map(({ month, revenue, expenses }) => {
         return {
-          name: month.substring(0, 3), // shortened month name
+          name: month.substring(0, 3), 
           revenue: revenue,
           profit: (revenue - expenses).toFixed(2)
         }
@@ -128,7 +128,7 @@ const Row1 = () => {
       <DashboardBox gridArea="b">
         <BoxHeader
           title="Profit and Revenue"
-          subtitle="top line represents revenue, bottom line represents expenses"
+          subtitle="top line represents revenue, bottom line represents profit"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
