@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CalcIcon from '@mui/icons-material/Calculate';
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme, IconButton } from "@mui/material";
 import FlexBetween from "@/components/FlexBetween";
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
 
 const Navbar = () => {
   const { palette } = useTheme();
   const [selected, setSelected] = useState("dashboard");
+
   return (
     <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.grey[300]}>
       {/* left side */}
@@ -19,7 +22,16 @@ const Navbar = () => {
 
       {/* right side */}
       <FlexBetween gap="2rem">
-        <Box sx={{ "&:hoover": { color: palette.primary[100]}}}>
+        <Box sx={{ "&:hover": { color: palette.primary[300]}}}>
+          <IconButton sx={{ ml: 1 }} color="inherit">
+            {palette.mode === "light" ? (
+              <Brightness4Icon />
+            ) : (
+              <Brightness7Icon />
+            )}
+          </IconButton>
+        </Box>
+        <Box sx={{ "&:hover": { color: palette.primary[300]}}}>
           <Link
             to="/"
             onClick={() => setSelected("dashboard")}
@@ -31,7 +43,7 @@ const Navbar = () => {
             dashboard
           </Link>
         </Box>
-        <Box>
+        <Box sx={{ "&:hover": { color: palette.primary[300]}}}>
           <Link
             to="/predictions"
             onClick={() => setSelected("predictions")}
