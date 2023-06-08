@@ -47,7 +47,7 @@ const Row2 = () => {
     <>
       <DashboardBox gridArea="d">
         <BoxHeader
-          title="Expenses: Operational vs. Non-operational"
+          title="Expenses: Operational vs. Non-operational (USD)"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">

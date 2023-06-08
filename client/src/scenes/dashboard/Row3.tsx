@@ -170,7 +170,7 @@ const Row3 = () => {
             <Box key={`${data[0].name}-${i}`}>
               <PieChart 
                 width={110} 
-                height={100}
+                height={90}
               >
                 <Pie
                   stroke="none"

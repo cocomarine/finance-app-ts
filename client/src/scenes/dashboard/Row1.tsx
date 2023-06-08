@@ -51,7 +51,7 @@ const Row1 = () => {
     <>
       <DashboardBox gridArea="a">
         <BoxHeader
-          title="Revenue and Expenses"
+          title="Revenue and Expenses (USD)"
           subtitle="top line represents revenue, bottom line represents expenses"
           sideText="+4%"
         />
@@ -127,7 +127,7 @@ const Row1 = () => {
 
       <DashboardBox gridArea="b">
         <BoxHeader
-          title="Profit and Revenue"
+          title="Profit and Revenue (USD)"
           subtitle="top line represents revenue, bottom line represents profit"
           sideText="+4%"
         />
@@ -196,7 +196,7 @@ const Row1 = () => {
 
       <DashboardBox gridArea="c">
         <BoxHeader
-          title="Revenue Month by Month"
+          title="Revenue Month by Month (USD)"
           subtitle="graph representing the revenue month by month"
           sideText="+4%"
         />
