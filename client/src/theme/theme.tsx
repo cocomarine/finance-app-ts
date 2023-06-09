@@ -1,7 +1,6 @@
-// with tailwind shade extension, highlight colour code and press cmd-k cmd-g 
-// to generate shades either sides (original colour will be 500)
+import { PaletteMode } from "@mui/material";
 
-export const tokens = {
+const tokens = {
   grey: {
     100: "#f0f0f3",
     200: "#e1e2e7",
@@ -51,28 +50,24 @@ export const tokens = {
   },
 };
 
-// mui theme settings
-export const themeSettings = {
+const theme = {
   palette: {
     primary: {
       ...tokens.primary,
-      main: tokens.primary[500],
-      light: tokens.primary[400],
     },
     secondary: {
       ...tokens.secondary,
-      main: tokens.secondary[500],
     },
     tertiary: {
       ...tokens.tertiary,
     },
     grey: {
       ...tokens.grey,
-      main: tokens.grey[500],
     },
     background: {
       default: tokens.background.main,
       dark: tokens.background.dark,
+      light: tokens.background.light,
     },
   },
   typography: {
@@ -111,3 +106,58 @@ export const themeSettings = {
     },
   },
 };
+
+
+export const getDesignTokens = (mode: PaletteMode) => {
+  const baseTheme = {
+    palette: {
+      mode,
+      primary: {
+        ...tokens.primary,
+      },
+      secondary: {
+        ...tokens.secondary,
+      },
+      tertiary: {
+        ...tokens.tertiary,
+      },
+      grey: {
+        ...tokens.grey,
+      },
+      background: {
+        default: tokens.background.main,
+        dark: tokens.background.dark,
+        light: tokens.background.light,
+      },
+    },
+  };
+
+  return mode === "dark"
+    ? baseTheme
+    : {
+        ...baseTheme,
+        palette: {
+          ...baseTheme.palette,
+          background: {
+            ...baseTheme.palette.background,
+            default: tokens.background.main,
+          },
+        },
+        typography: {
+          h3: {
+            color: tokens.grey[700],
+          },
+          h4: {
+            color: tokens.grey[500],
+          },
+          h5: {
+            color: tokens.grey[400],
+          },
+          h6: {
+            color: tokens.grey[300],
+          },
+        },
+      };
+};
+
+export default theme;

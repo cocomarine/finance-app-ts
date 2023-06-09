@@ -1,14 +1,13 @@
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
-import { createTheme } from "@mui/material/styles";
-import { useMemo } from "react";
-import { themeSettings } from "./theme";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashboard";
 import Predictions from "@/scenes/predictions";
+import { useThemeContext } from "./theme/ThemeContextProvider";
 
 function App() {
-  const theme = useMemo(() => createTheme(themeSettings), []); // createTheme from mui, use with themeSettings
+  const { theme } = useThemeContext();
+  
   return (
     <div className="app">
       <BrowserRouter>
