@@ -47,7 +47,7 @@ export const tokens = {
   background: {
     dark: "#2d2d34",
     main: "#1f2026",
-    light: "#f0f0f3"
+    light: "#d1d3da"
   },
 };
 
@@ -61,9 +61,9 @@ export const themeSettings = (mode: "dark" | "light") => {
             // palette values for dark mode
             primary: {
               ...tokens.primary,
-              dark: tokens.primary[200],
+              dark: tokens.primary[700],
               main: tokens.primary[500],
-              light: tokens.primary[800],
+              light: tokens.primary[200],
             },
             secondary: {
               ...tokens.secondary,
