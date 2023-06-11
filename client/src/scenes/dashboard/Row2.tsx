@@ -60,23 +60,10 @@ const Row2 = () => {
               bottom: 55,
             }}
           >
-            <defs>
-              <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                <stop 
-                  offset="5%"
-                  stopColor={palette.primary[300]}
-                  stopOpacity={0.8}
-                />
-                <stop 
-                  offset="95%"
-                  stopColor={palette.primary[300]}
-                  stopOpacity={0}
-                />
-              </linearGradient>
-            </defs>
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke={palette.secondary.light} />
             <XAxis 
               dataKey="name" 
+              axisLine={false}
               tickLine={false}  
               style={{ fontSize: "10px" }}
             />
@@ -94,12 +81,12 @@ const Row2 = () => {
               axisLine={false}
               style={{ fontSize: "10px" }} 
             />
-            <Tooltip />
+            <Tooltip labelStyle={{ color: palette.grey[800] }} />
             <Line
               yAxisId="left"
               type="monotone"
               dataKey="Non Operational"
-              stroke={palette.tertiary[500]}
+              stroke={palette.secondary.main}
             />
             <Line
               yAxisId="right"
@@ -171,7 +158,7 @@ const Row2 = () => {
               left: -10,
             }}
           >
-            <CartesianGrid stroke={palette.grey[800]}/>
+            <CartesianGrid stroke={palette.secondary.light}/>
             <XAxis 
               type="number" 
               dataKey="price" 
@@ -191,11 +178,11 @@ const Row2 = () => {
               tickFormatter={(v) => `$${v}`}
             />
             <ZAxis type="number" range={[20]} />
-            <Tooltip formatter={(v) => `$${v}`}/>
+            <Tooltip formatter={(v) => `$${v}`} labelStyle={{ color: palette.grey[800] }}/>
             <Scatter 
               name="Product Expense Ratio" 
               data={productExpenseData} 
-              fill={palette.tertiary[500]} />
+              fill={palette.secondary.dark} />
           </ScatterChart>
         </ResponsiveContainer>
       </DashboardBox>

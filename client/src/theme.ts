@@ -28,16 +28,16 @@ export const tokens = {
   },
 
   secondary: {
-    // pink
-    100: "#fcddfb",
-    200: "#fabbf8",
-    300: "#f799f4",
-    400: "#f577f1",
-    500: "#f255ed",
-    600: "#c244be",
-    700: "#91338e",
-    800: "#61225f",
-    900: "#30112f"
+    // grey
+    100: "#f0f0f3",
+    200: "#e1e2e7",
+    300: "#d1d3da",
+    400: "#c2c5ce",
+    500: "#b3b6c2",
+    600: "#8f929b",
+    700: "#6b6d74",
+    800: "#48494e",
+    900: "#242427",
   },
 
   tertiary: {
@@ -68,7 +68,9 @@ export const themeSettings = (mode: "dark" | "light") => {
             },
             secondary: {
               ...tokens.secondary,
+              dark: tokens.secondary[200],
               main: tokens.secondary[500],
+              light: tokens.secondary[700],
             },
             tertiary: {
               ...tokens.tertiary,
@@ -91,7 +93,9 @@ export const themeSettings = (mode: "dark" | "light") => {
             },
             secondary: {
               ...tokens.secondary,
+              dark: tokens.secondary[700],
               main: tokens.secondary[500],
+              light: tokens.secondary[200],
             },
             tertiary: {
               ...tokens.tertiary,

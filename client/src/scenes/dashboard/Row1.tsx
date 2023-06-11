@@ -83,12 +83,12 @@ const Row1 = () => {
               <linearGradient id="colorExpenses" x1="0" y1="0" x2="0" y2="1">
                 <stop 
                   offset="5%"
-                  stopColor={palette.primary.dark}
+                  stopColor={palette.secondary.dark}
                   stopOpacity={0.5}
                 />
                 <stop 
                   offset="95%"
-                  stopColor={palette.primary.dark}
+                  stopColor={palette.secondary.dark}
                   stopOpacity={0}
                 />
               </linearGradient>
@@ -96,6 +96,7 @@ const Row1 = () => {
             <XAxis 
               dataKey="name" 
               tickLine={false}  
+              axisLine={false}
               style={{ fontSize: "10px" }}
             />
             <YAxis
@@ -104,7 +105,7 @@ const Row1 = () => {
               style={{ fontSize: "10px" }} 
               domain={[8000, 23000]}
             />
-            <Tooltip />
+            <Tooltip labelStyle={{ color: palette.grey[800] }}/>
             <Area 
               type="monotone" 
               dataKey="revenue" 
@@ -117,7 +118,7 @@ const Row1 = () => {
               type="monotone" 
               dataKey="expenses" 
               dot={true}
-              stroke={palette.primary.main} 
+              stroke={palette.secondary.main} 
               fillOpacity={1} 
               fill="url(#colorExpenses)" 
             />
@@ -155,10 +156,11 @@ const Row1 = () => {
                 />
               </linearGradient>
             </defs>
-            <CartesianGrid vertical={false} stroke={palette.grey[700]} />
+            <CartesianGrid vertical={false} stroke={palette.secondary.light} />
             <XAxis 
               dataKey="name" 
               tickLine={false}  
+              axisLine={false}
               style={{ fontSize: "10px" }}
             />
             <YAxis
@@ -174,7 +176,7 @@ const Row1 = () => {
               axisLine={false}
               style={{ fontSize: "10px" }} 
             />
-            <Tooltip />
+            <Tooltip labelStyle={{ color: palette.grey[800] }}/>
             <Legend height={20} wrapperStyle={{
               margin: '0 0 10px 0'
             }}/>
@@ -182,7 +184,7 @@ const Row1 = () => {
               yAxisId="left"
               type="monotone"
               dataKey="profit"
-              stroke={palette.tertiary[500]}
+              stroke={palette.secondary.main}
             />
             <Line
               yAxisId="right"
@@ -196,7 +198,7 @@ const Row1 = () => {
 
       <DashboardBox gridArea="c">
         <BoxHeader
-          title="Revenue Month by Month (USD)"
+          title=" (USD)"
           subtitle="graph representing the revenue month by month"
           sideText="+4%"
         />
@@ -212,7 +214,7 @@ const Row1 = () => {
               bottom: 58,
             }}
           >
-            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <CartesianGrid vertical={false} stroke={palette.secondary.light} />
             <XAxis
               dataKey="name"
               axisLine={false}
@@ -224,7 +226,7 @@ const Row1 = () => {
               tickLine={false}
               style={{ fontSize: "10px" }} 
             />
-            <Tooltip />
+            <Tooltip contentStyle={{ color: palette.grey[800] }} />
             <Bar dataKey="revenue" fill="url(#colorRevenue)" />
           </BarChart>
         </ResponsiveContainer>

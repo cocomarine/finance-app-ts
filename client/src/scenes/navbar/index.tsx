@@ -14,7 +14,7 @@ const Navbar = () => {
   const { palette } = useTheme();
 
   return (
-    <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.tertiary.dark}>
+    <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.secondary.dark}>
       {/* left side */}
       <FlexBetween gap="0.75rem" >
         <CalcIcon sx={{ fontSize: "28px" }}/>
