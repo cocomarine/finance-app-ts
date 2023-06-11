@@ -41,13 +41,14 @@ export const tokens = {
   },
 
   tertiary: {
-    // purple
-    500: "#8884d8",
+    // yellow
+    500: "#dbc244",
   },
+
   background: {
     dark: "#2d2d34",
     main: "#1f2026",
-    light: "#d1d3da"
+    light: "#f6f6f6"
   },
 };
 
@@ -61,9 +62,9 @@ export const themeSettings = (mode: "dark" | "light") => {
             // palette values for dark mode
             primary: {
               ...tokens.primary,
-              dark: tokens.primary[700],
+              dark: tokens.primary[200],
               main: tokens.primary[500],
-              light: tokens.primary[200],
+              light: tokens.primary[700],
             },
             secondary: {
               ...tokens.secondary,
@@ -71,10 +72,10 @@ export const themeSettings = (mode: "dark" | "light") => {
             },
             tertiary: {
               ...tokens.tertiary,
+              main: tokens.tertiary[500],
             },
             grey: {
               ...tokens.grey,
-              main: tokens.grey[500],
             },
             background: {
               default: tokens.background.main,
@@ -94,10 +95,10 @@ export const themeSettings = (mode: "dark" | "light") => {
             },
             tertiary: {
               ...tokens.tertiary,
+              main: tokens.tertiary[500],
             },
             grey: {
               ...tokens.grey,
-              main: tokens.grey[500],
             },
             background: {
               default: tokens.background.light,
@@ -119,24 +120,20 @@ export const themeSettings = (mode: "dark" | "light") => {
         fontFamily: ["Inter", "sans-serif"].join(","),
         fontSize: 20,
         fontWeight: 800,
-        color: tokens.grey[200],
       },
       h4: {
         fontFamily: ["Inter", "sans-serif"].join(","),
         fontSize: 14,
         fontWeight: 600,
-        color: tokens.grey[300],
       },
       h5: {
         fontFamily: ["Inter", "sans-serif"].join(","),
         fontSize: 12,
         fontWeight: 400,
-        color: tokens.grey[500],
       },
       h6: {
         fontFamily: ["Inter", "sans-serif"].join(","),
         fontSize: 10,
-        color: tokens.grey[700],
       },
     },
   };

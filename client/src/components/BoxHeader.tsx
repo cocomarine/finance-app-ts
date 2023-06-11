@@ -13,7 +13,7 @@ const BoxHeader = ({ icon, title, subtitle, sideText }: Props) => {
 
   return (
     <FlexBetween 
-      color={palette.grey[400]}
+      color={palette.tertiary.dark}
       margin="1.5rem 1rem 0 1rem"
     >
       <FlexBetween>
@@ -27,7 +27,7 @@ const BoxHeader = ({ icon, title, subtitle, sideText }: Props) => {
           </Typography>
         </Box>
       </FlexBetween>
-      <Typography variant="h5" fontWeight="700" color={palette.grey[100]}>
+      <Typography variant="h5" fontWeight="700" color={palette.tertiary.main}>
         {sideText}
       </Typography>
     </FlexBetween>

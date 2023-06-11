@@ -14,12 +14,12 @@ const Navbar = () => {
   const { palette } = useTheme();
 
   return (
-    <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.grey[300]}>
+    <FlexBetween mb="0.25rem" p="0.5rem 0rem" color={palette.tertiary.dark}>
       {/* left side */}
       <FlexBetween gap="0.75rem" >
         <CalcIcon sx={{ fontSize: "28px" }}/>
         <Typography variant="h4" fontSize="18px">
-          Financial Performance Dashboard
+          Financial Performance
         </Typography>
       </FlexBetween>
 
@@ -28,13 +28,9 @@ const Navbar = () => {
         <Box sx={{ "&:hover": { color: palette.primary[300]}}}>
           <IconButton sx={{ ml: 1 }} color="inherit" onClick={() => dispatch(setMode())}>
             {palette.mode === "dark" ? (
-              <>{palette.mode}
-                <DarkMode sx={{ color: palette.primary.dark}} />
-              </>
+              <DarkMode sx={{ fontSize: "25px", color: palette.primary.dark}} />
             ) : (
-              <>{palette.mode}
-                <LightMode />
-              </>
+              <LightMode sx={{ fontSize: "25px" }}/>
             )}
           </IconButton>
         </Box>
