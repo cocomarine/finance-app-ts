@@ -1,14 +1,20 @@
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { useMemo } from "react";
-import { themeSettings } from "./theme";
+import { useSelector } from "react-redux";
+import { RootState } from "@/state";
+import { themeSettings } from "@/theme";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "@/scenes/navbar";
 import Dashboard from "@/scenes/dashboard";
 import Predictions from "@/scenes/predictions";
 
 function App() {
-  const theme = useMemo(() => createTheme(themeSettings), []); // createTheme from mui, use with themeSettings
+  const mode = useSelector((state: RootState) => state.theme.mode);
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+  console.log(mode)
+  console.log(theme)
+
   return (
     <div className="app">
       <BrowserRouter>

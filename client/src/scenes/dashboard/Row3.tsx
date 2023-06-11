@@ -97,7 +97,6 @@ const Row3 = () => {
           height="75%"
           sx={{
             "& .MuiDataGrid-root": {
-              color: palette.grey[300],
               border: "none",
             },
             "& .MuiDataGrid-cell": {
@@ -131,7 +130,6 @@ const Row3 = () => {
           height="80%"
           sx={{
             "& .MuiDataGrid-root": {
-              color: palette.grey[300],
               border: "none",
             },
             "& .MuiDataGrid-cell": {
