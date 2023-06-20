@@ -153,7 +153,7 @@ const Row3 = () => {
         </Box>
       </DashboardBox>
 
-      <DashboardBox gridArea="i">
+      <DashboardBox gridArea="i" marginBottom="-0.3rem">
         <BoxHeader
           title="Expense Breakdown By Category"
           sideText="+4%"
@@ -168,7 +168,7 @@ const Row3 = () => {
             <Box key={`${data[0].name}-${i}`}>
               <PieChart 
                 width={110} 
-                height={90}
+                height={80}
               >
                 <Pie
                   stroke="none"
